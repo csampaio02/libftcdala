@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csampaio <csampaio@student.42luanda.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/10 14:28:28 by csampaio          #+#    #+#             */
-/*   Updated: 2026/08/10 15:20:13 by csampaio         ###   ########.fr       */
+/*   Created: 2026/08/18 10:06:57 by csampaio          #+#    #+#             */
+/*   Updated: 2026/08/18 10:41:39 by csampaio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
-	size_t	j;
-
-	if (!big || !little)
-		return (NULL);
-	if (little[0] == '\0')
-		return ((char *)big);
-	i = 0;
-	while (i < len && big[i] != '\0')
+	if (!lst || !f)
+		return ;
+	while (lst != NULL)
 	{
-		j = 0;
-		while ((i + j) < len && big[i + j] != '\0' && big[i + j] == little[j])
-			j++;
-		if (little[j] == '\0' )
-			return ((char *)&big[i]);
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (NULL);
 }

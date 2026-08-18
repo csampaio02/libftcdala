@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	str = NULL;
 	while (s[i] != '\0')

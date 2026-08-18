@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csampaio <csampaio@student.42luanda.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/10 14:28:28 by csampaio          #+#    #+#             */
-/*   Updated: 2026/08/10 15:20:13 by csampaio         ###   ########.fr       */
+/*   Created: 2026/08/15 13:56:23 by csampaio          #+#    #+#             */
+/*   Updated: 2026/08/15 17:39:36 by csampaio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-	size_t	j;
-
-	if (!big || !little)
-		return (NULL);
-	if (little[0] == '\0')
-		return ((char *)big);
-	i = 0;
-	while (i < len && big[i] != '\0')
-	{
-		j = 0;
-		while ((i + j) < len && big[i + j] != '\0' && big[i + j] == little[j])
-			j++;
-		if (little[j] == '\0' )
-			return ((char *)&big[i]);
-		i++;
-	}
-	return (NULL);
+	if (fd < 0)
+		return ;
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
