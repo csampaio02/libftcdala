@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csampaio <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: csampaio <csampaio@student.42luanda.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/30 14:46:17 by csampaio          #+#    #+#             */
-/*   Updated: 2026/07/31 12:03:16 by csampaio         ###   ########.fr       */
+/*   Created: 2026/08/19 11:19:35 by csampaio          #+#    #+#             */
+/*   Updated: 2026/08/19 11:19:43 by csampaio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

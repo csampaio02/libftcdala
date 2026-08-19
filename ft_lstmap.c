@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: csampaio <csampaio@student.42luanda.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/18 10:44:00 by csampaio          #+#    #+#             */
-/*   Updated: 2026/08/18 12:08:09 by csampaio         ###   ########.fr       */
+/*   Created: 2026/08/19 10:44:31 by csampaio          #+#    #+#             */
+/*   Updated: 2026/08/19 11:05:38 by csampaio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
