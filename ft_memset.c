@@ -14,17 +14,19 @@
 
 void	*ft_memset(void	*str, int c, size_t n)
 {
-	unsigned char	*s;
 	size_t			i;
+	unsigned char	c1;
+	unsigned char	*s;
 
 	if (!str)
 		return (NULL);
-	i = 0;
 	s = (unsigned char *)str;
+	c1 = (unsigned char)c;
+	i = 0;
 	while (i < n)
 	{
-		s[i] = c;
+		s[i] = c1;
 		i++;
 	}
-	return (str);
+	return (s);
 }
